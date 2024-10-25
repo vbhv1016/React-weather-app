@@ -46,31 +46,31 @@ This is a weather dashboard application built using **React + Vite**. The applic
 
 Make sure to navigate to the project directory and install the necessary dependencies:
 
-\`\`\`bash
-npm install
-\`\`\`
+
+    npm install
+
 
 ### 3. Set Up Environment Variables
 
 Create a `.env` file in the root of the project and add your OpenWeatherMap API key:
 
-\`\`\`
-REACT_APP_WEATHER_API_KEY=your_openweather_api_key
-\`\`\`
+
+    REACT_APP_WEATHER_API_KEY=your_openweather_api_key
+
 
 ### 4. Running the Application
 
 Start the development server using Vite:
 
-\`\`\`bash
-npm run dev
-\`\`\`
+
+    npm run dev
+
 
 The application will be running at:
 
-\`\`\`
-http://localhost:3000
-\`\`\`
+
+    http://localhost:3000
+
 
 ---
 
@@ -78,48 +78,26 @@ http://localhost:3000
 
 To run the application inside a Docker container, follow these steps:
 
-### 1. Create a `Dockerfile`
-
-\`\`\`Dockerfile
-# Stage 1: Build the React app
-FROM node:18-alpine AS build
-
-WORKDIR /app
-
-COPY package.json package-lock.json ./
-RUN npm install
-
-COPY . .
-RUN npm run build
-
-# Stage 2: Serve the app using a simple web server
-FROM nginx:alpine
-COPY --from=build /app/dist /usr/share/nginx/html
-
-EXPOSE 80
-
-CMD ["nginx", "-g", "daemon off;"]
-\`\`\`
 
 ### 2. Build and Run the Docker Container
 
 #### Step 1: Build the Docker image
 
-\`\`\`bash
-docker build -t react-weather-app .
-\`\`\`
+
+    docker build -t react-weather-app .
+
 
 #### Step 2: Run the Docker container
 
-\`\`\`bash
-docker run -p 3000:80 react-weather-app
-\`\`\`
+
+    docker run -p 3000:80 react-weather-app
+
 
 The app will be available at:
 
-\`\`\`
-http://localhost:3000
-\`\`\`
+
+    http://localhost:3000
+
 
 ---
 
@@ -127,9 +105,9 @@ http://localhost:3000
 
 To use the OpenWeatherMap API, you need to set an environment variable for the API key. Create a `.env` file in the root of your project with the following content:
 
-\`\`\`
-REACT_APP_WEATHER_API_KEY=your_openweather_api_key
-\`\`\`
+
+    REACT_APP_WEATHER_API_KEY=your_openweather_api_key
+
 
 ---
 
@@ -151,6 +129,3 @@ Feel free to open issues or submit pull requests if you'd like to contribute to 
 
 ---
 
-## License
-
-This project is licensed under the MIT License.
