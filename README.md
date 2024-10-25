@@ -37,10 +37,10 @@ This is a weather dashboard application built using **React + Vite**. The applic
 
 ### 1. Clone the Repository
 
-\`\`\`bash
-git clone https://github.com/vbhv1016/React-weather-app
-cd React-Weather-App
-\`\`\`
+
+    git clone https://github.com/vbhv1016/React-weather-app
+    cd React-Weather-App
+
 
 ### 2. Install Dependencies
 
